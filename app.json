@@ -1,0 +1,12 @@
+{
+  "name": "QLNV",
+  "displayName": "QLNV",
+  "expo": {
+    "name": "QLNV",
+    "slug": "QLNV",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

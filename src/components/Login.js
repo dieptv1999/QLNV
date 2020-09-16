@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, ImageBackground, Image, Button } from 'react-native';
 import LoginCart from './LoginCart';
 import RadioButton from './widgets/RadioButton';
-import { connect } from 'react-redux';
 
 class Login extends Component {
     constructor(props) {
@@ -30,9 +29,7 @@ class Login extends Component {
                     <View style={styles.buttonLogin}>
                         <RadioButton selected={this.state.selected} size={20} content={" Remember me"} callback={this.changeSelectRememberMe.bind(this)} />
                         <View style={styles.buttonLoginDetail}>
-                            <Button type="solid" title="Login" onPress = {
-                                ()=>{this.props.onLogin(1)}
-                            }></Button>
+                            <Button type="solid" title="Login" onPress = {()=>{ this.props.onLogin(1) }}></Button>
                         </View>
                     </View>
                     <View style={styles.buttonRegister}>

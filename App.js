@@ -8,10 +8,14 @@ import createSagaMiddleware from 'redux-saga';
 import rootSaga from './src/sagas/rootSaga';
 
 import LoginContainer from './src/containers/index';
+import { View } from 'react-native';
+import Login from './src/components/Login';
 
 //Middleware
 const sagaMiddleware = createSagaMiddleware();
 let store = createStore(allReducers, applyMiddleware(sagaMiddleware));
+sagaMiddleware.run(rootSaga);
+
 
 export default function App() {
   return (
@@ -20,12 +24,3 @@ export default function App() {
     </Provider>
   );
 }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
